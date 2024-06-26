@@ -6,6 +6,7 @@ import {
   IoIosArrowDroprightCircle,
   IoIosArrowDropleftCircle,
 } from "react-icons/io";
+import MovieCard from "../MovieCard/MovieCard";
 
 const Carousel = ({  }) => {
   const carouselRef = useRef();
@@ -43,10 +44,10 @@ const Carousel = ({  }) => {
         />
       </div>
       <div ref={carouselRef} className={styles.carousel}>
-{/*         {list.map((movie, index) => {
+        {/*         {list.map((movie, index) => {
           return (
             <MovieCard
-              refProp={movieCardRef}
+              
               title={movie.original_title}
               imgUrl={movie.backdrop_path}
               movie={movie}
@@ -54,6 +55,12 @@ const Carousel = ({  }) => {
             />
           );
         })} */}
+
+        <MovieCard refProp={movieCardRef} />
+        <MovieCard refProp={movieCardRef} />
+        <MovieCard refProp={movieCardRef} />
+        <MovieCard refProp={movieCardRef} />
+        <MovieCard refProp={movieCardRef}  />
       </div>
     </div>
   );
