@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useRef } from "react";
 import styles from "./carousel.module.scss";
@@ -8,7 +8,7 @@ import {
 } from "react-icons/io";
 import MovieCard from "../MovieCard/MovieCard";
 
-const Carousel = ({  }) => {
+const Carousel = ({ movie = [] }) => {
   const carouselRef = useRef();
   const movieCardRef = useRef();
 
@@ -44,23 +44,18 @@ const Carousel = ({  }) => {
         />
       </div>
       <div ref={carouselRef} className={styles.carousel}>
-        {/*         {list.map((movie, index) => {
+        {movie.map((movie, index) => {
           return (
-            <MovieCard
+            <MovieCard key={index} refProp={movieCardRef} />
+            /*             <MovieCard
               
               title={movie.original_title}
               imgUrl={movie.backdrop_path}
               movie={movie}
               key={index}
-            />
+            /> */
           );
-        })} */}
-
-        <MovieCard refProp={movieCardRef} />
-        <MovieCard refProp={movieCardRef} />
-        <MovieCard refProp={movieCardRef} />
-        <MovieCard refProp={movieCardRef} />
-        <MovieCard refProp={movieCardRef}  />
+        })}
       </div>
     </div>
   );

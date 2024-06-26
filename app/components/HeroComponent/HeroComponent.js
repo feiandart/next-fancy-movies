@@ -1,7 +1,7 @@
 
 import styles from "./herocomponent.module.scss";
 
-const HeroComponent = () => {
+const HeroComponent = ({movie}) => {
 
 /*   const handleButtonClick = () => {
       setIsModalVisible(true);
@@ -10,8 +10,8 @@ const HeroComponent = () => {
 
   return (
     <div className={styles.heroContainer}>
-      <h2>Titolo film</h2>
-      <img src={`https://picsum.photos/1000/1000`} alt="hero-img" />
+      <h2>{movie.title}</h2>
+      <img src={movie.imageUrl} alt="hero-img" />
       <button /* onClick={handleButtonClick} */ className={styles.heroBtn}>
         Discover more
       </button>
