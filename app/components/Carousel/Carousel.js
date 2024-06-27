@@ -46,7 +46,7 @@ const Carousel = ({ movie = [] }) => {
       <div ref={carouselRef} className={styles.carousel}>
         {movie.map((movie, index) => {
           return (
-            <MovieCard key={index} refProp={movieCardRef} />
+            <MovieCard key={index} refProp={movieCardRef} movie={movie} />
             /*             <MovieCard
               
               title={movie.original_title}

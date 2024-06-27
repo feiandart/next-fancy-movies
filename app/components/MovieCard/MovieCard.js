@@ -1,7 +1,7 @@
 import styles from "./moviecard.module.scss";
 
 
-const MovieCard = ({  refProp }) => {
+const MovieCard = ({  movie, refProp }) => {
 /*   const { setIsModalVisible, setMovieDetails } = useContext(globalContext); */
 
 /*   const handleCardClick = () => {
@@ -15,8 +15,8 @@ const MovieCard = ({  refProp }) => {
         ref={refProp}
         className={styles.movieCard} /* onClick={handleCardClick} */
       >
-        <img src={`https://picsum.photos/1000/1000`} alt="movie-card-img" />
-        <p>Titolo film</p>
+        <img src={movie.imageUrl} alt="movie-card-img" />
+        <p>{movie.title}</p>
       </div>
     </>
   );
